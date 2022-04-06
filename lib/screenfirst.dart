@@ -74,7 +74,7 @@ class _FirstScreenState extends State<FirstScreen> {
 
   Widget bookList()  {
     return Container(
-      height: 480,
+      height: 370,
       width: double.infinity,
       color: Colors.white,
       child: Column(
@@ -93,14 +93,14 @@ class _FirstScreenState extends State<FirstScreen> {
             padding: const EdgeInsets.all(5.0),
             child: Container(
               color: Colors.white,
-              height: 400,
+              height: 300,
               width: double.infinity,
               child: ListView.builder(
                   itemCount: 5,
                   scrollDirection: Axis.horizontal,
                   itemBuilder: (context, int index) {
                     return Container(
-                      height: 400,
+                      height: 250,
                       width: 200,
                       color: Colors.white,
                       margin: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
@@ -120,7 +120,7 @@ class _FirstScreenState extends State<FirstScreen> {
                             const Text("Galaxy 101",style: TextStyle(fontWeight: FontWeight.bold, fontSize: 22),),
                             const Text("by Anna", style: TextStyle(color: Colors.grey),),
                             Row(
-                              children: [
+                              children: const [
                                 Text("4.5"),
                                 Icon(Icons.star),
                               ],
@@ -171,17 +171,24 @@ class _FirstScreenState extends State<FirstScreen> {
                       const Text("by Jasmine",style: TextStyle(fontWeight: FontWeight.w300),),
                       Container(
                         child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             Container(
                               height: 30,
-                              width: 100,
+                              width: 130,
                               alignment: Alignment.topLeft,
-                              margin: const EdgeInsets.all(20),
-                              child: const LinearProgressIndicator(
-                                value: 0.7,
-                                minHeight: 7,
+                              child: const Padding(
+                                padding: EdgeInsets.symmetric(vertical: 10),
+                                child: LinearProgressIndicator(
+                                  value: 0.7,
+                                  minHeight: 7,
+                                ),
                               ),
-                            )
+
+                            ),
+                            const SizedBox(width: 10,),
+                            const Text('75%'),
+
                           ],
 
                         ),

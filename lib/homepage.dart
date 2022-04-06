@@ -51,7 +51,7 @@ class _HomePageState extends State<HomePage> {
               const SizedBox(
                 height: 20,
               ),
-              const Text('All of your favourite books are\n       already here',
+              const Text('All of your favourite books are\nalready here',
               style: TextStyle(fontWeight: FontWeight.w200),),
 
             ],
